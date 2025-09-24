@@ -1,22 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Labs20252-Gr04</string>
-</resources>
+    <string name="app_name">Datos de Usuario</string>
 
-<!--
- <resources>
-    <string name="app_name">Unscramble</string>
-    <string name="instructions">Unscramble the word using all the letters.</string>
-    <string name="skip">Skip</string>
-    <string name="submit">Submit</string>
-    <string name="score">Score: %d</string>
-    <string name="word_count">%d/10</string>
-    <string name="enter_your_word">Enter your word</string>
-    <string name="congratulations">Congratulations!</string>
-    <string name="you_scored">"You scored: %d"</string>
-    <string name="exit">Exit</string>
-    <string name="play_again">Play Again</string>
-    <string name="wrong_guess">Wrong Guess!</string>
-</resources>
+    <!-- Información Personal -->
+    <string name="personal_information">Información Personal</string>
+    <string name="first_name">Nombre (*)</string>
+    <string name="last_name">Apellido (*)</string>
+    <string name="gender">Sexo</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="other">Otro</string>
+    <string name="birth_date">Fecha de nacimiento (*)</string>
+    <string name="education_level">Grado de Escolaridad</string>
+    <string name="elementary">Primaria</string>
+    <string name="high_school">Secundaria</string>
+    <string name="technical">Técnica</string>
+    <string name="university">Universidad</string>
+    <string name="postgraduate">Postgrado</string>
 
- -->
+    <!-- Información de Contacto -->
+    <string name="contact_information">Información de Contacto</string>
+    <string name="phone">Teléfono</string>
+    <string name="address">Dirección</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="country">País</string>
+    <string name="city">Ciudad</string>
+
+    <!-- Países Latinoamericanos -->
+    <string name="argentina">Argentina</string>
+    <string name="bolivia">Bolivia</string>
+    <string name="brazil">Brasil</string>
+    <string name="chile">Chile</string>
+    <string name="colombia">Colombia</string>
+    <string name="costa_rica">Costa Rica</string>
+    <string name="cuba">Cuba</string>
+    <string name="dominican_republic">República Dominicana</string>
+    <string name="ecuador">Ecuador</string>
+    <string name="el_salvador">El Salvador</string>
+    <string name="guatemala">Guatemala</string>
+    <string name="honduras">Honduras</string>
+    <string name="mexico">México</string>
+    <string name="nicaragua">Nicaragua</string>
+    <string name="panama">Panamá</string>
+    <string name="paraguay">Paraguay</string>
+    <string name="peru">Perú</string>
+    <string name="uruguay">Uruguay</string>
+    <string name="venezuela">Venezuela</string>
+
+    <!-- Botones y Mensajes -->
+    <string name="next">Siguiente</string>
+    <string name="submit">Enviar</string>
+    <string name="fill_required_fields">Por favor complete todos los campos obligatorios (*)</string>
+    <string name="success_message">¡Datos guardados exitosamente!</string>
+</resources>

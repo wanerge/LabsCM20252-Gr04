@@ -1,2 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">User Data</string>
+
+    <!-- Personal Information -->
+    <string name="personal_information">Personal Information</string>
+    <string name="first_name">First Name (*)</string>
+    <string name="last_name">Last Name (*)</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="birth_date">Birth Date (*)</string>
+    <string name="education_level">Education Level</string>
+    <string name="elementary">Elementary</string>
+    <string name="high_school">High School</string>
+    <string name="technical">Technical</string>
+    <string name="university">University</string>
+    <string name="postgraduate">Postgraduate</string>
+
+    <!-- Contact Information -->
+    <string name="contact_information">Contact Information</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+
+    <!-- Latin American Countries -->
+    <string name="argentina">Argentina</string>
+    <string name="bolivia">Bolivia</string>
+    <string name="brazil">Brazil</string>
+    <string name="chile">Chile</string>
+    <string name="colombia">Colombia</string>
+    <string name="costa_rica">Costa Rica</string>
+    <string name="cuba">Cuba</string>
+    <string name="dominican_republic">Dominican Republic</string>
+    <string name="ecuador">Ecuador</string>
+    <string name="el_salvador">El Salvador</string>
+    <string name="guatemala">Guatemala</string>
+    <string name="honduras">Honduras</string>
+    <string name="mexico">Mexico</string>
+    <string name="nicaragua">Nicaragua</string>
+    <string name="panama">Panama</string>
+    <string name="paraguay">Paraguay</string>
+    <string name="peru">Peru</string>
+    <string name="uruguay">Uruguay</string>
+    <string name="venezuela">Venezuela</string>
+
+    <!-- Buttons and Messages -->
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+    <string name="fill_required_fields">Please fill in all required fields (*)</string>
+    <string name="success_message">Data saved successfully!</string>
+</resources>
