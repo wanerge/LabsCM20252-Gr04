@@ -31,7 +31,8 @@ fun FirstNameField(value: String, onValueChange: (String) -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         keyboardOptions = KeyboardOptions(
             capitalization = KeyboardCapitalization.Words,
-            imeAction = ImeAction.Next
+            imeAction = ImeAction.Next,
+            autoCorrectEnabled = false
         )
     )
 }
@@ -47,7 +48,8 @@ fun LastNameField(value: String, onValueChange: (String) -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         keyboardOptions = KeyboardOptions(
             capitalization = KeyboardCapitalization.Words,
-            imeAction = ImeAction.Next
+            imeAction = ImeAction.Next,
+            autoCorrectEnabled = false
         )
     )
 }
@@ -72,7 +74,15 @@ fun GenderField(selectedOption: String, onOptionChange: (String) -> Unit) {
                 Row(
                     Modifier.selectable(
                         selected = (text == selectedOption),
-                        onClick = { onOptionChange(text) },
+                        onClick = {
+                            if (text == selectedOption) {
+                                // Si está seleccionado, deselecciona enviando una cadena vacía
+                                onOptionChange("")
+                            } else {
+                                // Si no está seleccionado, selecciona esta nueva opción
+                                onOptionChange(text)
+                            }
+                        },
                         role = Role.RadioButton
                     ),
                     verticalAlignment = Alignment.CenterVertically
@@ -139,12 +149,17 @@ fun BirthdayField(selectedDate: String, onDateChange: (String) -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EducationLevelSpinner(selectedOption: String, onOptionChange: (String) -> Unit) {
-    val options = listOf(
+    // Definimos las opciones estáticas
+    val staticOptions = listOf(
         stringResource(R.string.elementary),
         stringResource(R.string.high_school),
         stringResource(R.string.university),
         stringResource(R.string.other)
     )
+
+    val clearOptionText = stringResource(R.string.none_select)
+    val allOptions = listOf(clearOptionText) + staticOptions
+
     var expanded by remember { mutableStateOf(false) }
 
     ExposedDropdownMenuBox(
@@ -153,7 +168,7 @@ fun EducationLevelSpinner(selectedOption: String, onOptionChange: (String) -> Un
         modifier = Modifier.fillMaxWidth()
     ) {
         OutlinedTextField(
-            value = selectedOption,
+            value = if (selectedOption.isBlank()) clearOptionText else selectedOption,
             onValueChange = {},
             label = { Text(stringResource(R.string.education_level)) },
             readOnly = true,
@@ -162,17 +177,23 @@ fun EducationLevelSpinner(selectedOption: String, onOptionChange: (String) -> Un
                 .fillMaxWidth(),
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) }
         )
+
         ExposedDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false }
         ) {
-            options.forEach { option ->
+            allOptions.forEach { option ->
                 DropdownMenuItem(
                     text = { Text(option) },
                     onClick = {
-                        onOptionChange(option)
+                        if (option == clearOptionText) {
+                            onOptionChange("")
+                        } else {
+                            onOptionChange(option)
+                        }
                         expanded = false
-                    }
+                    },
+                    enabled = option != clearOptionText || selectedOption.isNotBlank()
                 )
             }
         }
@@ -208,7 +229,8 @@ fun AddressField(value: String, onValueChange: (String) -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         keyboardOptions = KeyboardOptions(
             capitalization = KeyboardCapitalization.Sentences,
-            imeAction = ImeAction.Next
+            imeAction = ImeAction.Next,
+            autoCorrectEnabled = false
         )
     )
 }
@@ -275,12 +297,19 @@ fun CountryDropdown(selectedOption: String, onOptionChange: (String) -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CityDropdown(selectedOption: String, onOptionChange: (String) -> Unit) {
-    val options = listOf(
+    // Opciones base del menú (usando la simulación de stringResource)
+    val staticOptions = listOf(
         stringResource(R.string.medellin),
         stringResource(R.string.bogota),
         stringResource(R.string.cali),
         stringResource(R.string.other)
     )
+
+    // Opción que representa la deselección (envía "" al ViewModel)
+    val clearOptionText = stringResource(R.string.none_select)
+    // Lista completa, incluyendo la opción para borrar
+    val allOptions = listOf(clearOptionText) + staticOptions
+
     var expanded by remember { mutableStateOf(false) }
 
     ExposedDropdownMenuBox(
@@ -289,7 +318,8 @@ fun CityDropdown(selectedOption: String, onOptionChange: (String) -> Unit) {
         modifier = Modifier.fillMaxWidth()
     ) {
         OutlinedTextField(
-            value = selectedOption,
+            // Muestra el valor seleccionado o el texto de "Borrar Selección" si está vacío.
+            value = if (selectedOption.isBlank()) clearOptionText else selectedOption,
             onValueChange = {},
             label = { Text(stringResource(R.string.city)) },
             readOnly = true,
@@ -298,17 +328,25 @@ fun CityDropdown(selectedOption: String, onOptionChange: (String) -> Unit) {
                 .fillMaxWidth(),
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) }
         )
+
         ExposedDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false }
         ) {
-            options.forEach { option ->
+            allOptions.forEach { option ->
                 DropdownMenuItem(
                     text = { Text(option) },
                     onClick = {
-                        onOptionChange(option)
+                        // LÓGICA DE DESELECCIÓN:
+                        if (option == clearOptionText) {
+                            onOptionChange("") // Si se selecciona "Borrar", envía cadena vacía
+                        } else {
+                            onOptionChange(option) // Envía la ciudad seleccionada
+                        }
                         expanded = false
-                    }
+                    },
+                    // Deshabilita la opción de "Borrar Selección" si el campo ya está vacío
+                    enabled = option != clearOptionText || selectedOption.isNotBlank()
                 )
             }
         }

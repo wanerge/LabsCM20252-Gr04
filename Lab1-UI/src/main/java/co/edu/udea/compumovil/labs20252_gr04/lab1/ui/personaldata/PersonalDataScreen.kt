@@ -228,10 +228,10 @@ fun SummaryScreen(
                     Text("${stringResource(R.string.education)}: ${uiState.educationLevel}")
                 }
                 SummaryCard(stringResource(R.string.contact_information)) {
-                    Text("${stringResource(R.string.phone)}: ${uiState.phone}")
+                    Text("${stringResource(R.string.phone_)}: ${uiState.phone}")
                     Text("${stringResource(R.string.address)}: ${uiState.address}")
-                    Text("${stringResource(R.string.email)}: ${uiState.email}")
-                    Text("${stringResource(R.string.country)}: ${uiState.country}")
+                    Text("${stringResource(R.string.email_)}: ${uiState.email}")
+                    Text("${stringResource(R.string.country_)}: ${uiState.country}")
                     Text("${stringResource(R.string.city)}: ${uiState.city}")
                 }
                 Button(onClick = onEdit, modifier = Modifier.fillMaxWidth()) {
@@ -247,10 +247,10 @@ fun SummaryScreen(
                     Text("${stringResource(R.string.education)}: ${uiState.educationLevel}")
                 }
                 SummaryCard(stringResource(R.string.contact_information), Modifier.weight(1f)) {
-                    Text("${stringResource(R.string.phone)}: ${uiState.phone}")
+                    Text("${stringResource(R.string.phone_)}: ${uiState.phone}")
                     Text("${stringResource(R.string.address)}: ${uiState.address}")
-                    Text("${stringResource(R.string.email)}: ${uiState.email}")
-                    Text("${stringResource(R.string.country)}: ${uiState.country}")
+                    Text("${stringResource(R.string.email_)}: ${uiState.email}")
+                    Text("${stringResource(R.string.country_)}: ${uiState.country}")
                     Text("${stringResource(R.string.city)}: ${uiState.city}")
                 }
             }

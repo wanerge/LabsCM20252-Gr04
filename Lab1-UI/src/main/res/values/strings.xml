@@ -20,10 +20,10 @@
 
     <!-- Información de Contacto -->
     <string name="contact_information">Datos de Contacto</string>
-    <string name="phone">Teléfono</string>
+    <string name="phone">Teléfono (*)</string>
     <string name="address">Dirección</string>
-    <string name="email">Correo Electrónico</string>
-    <string name="country">País</string>
+    <string name="email">Correo Electrónico (*)</string>
+    <string name="country">País (*)</string>
     <string name="city">Ciudad</string>
 
     <!-- resumen de datos -->
@@ -32,6 +32,9 @@
     <string name="full_name">Nombre</string>
     <string name="birth">Nacimiento</string>
     <string name="education">Escolaridad</string>
+    <string name="phone_">Teléfono</string>
+    <string name="email_">Correo Electrónico</string>
+    <string name="country_">País</string>
 
     <!-- Países Latinoamericanos -->
     <string name="argentina">Argentina</string>
@@ -66,6 +69,7 @@
     <string name="okay">Listo</string>
     <string name="cancel">Cancelar</string>
     <string name="edit_data">Editar datos</string>
+    <string name="none_select">Ninguno/Seleccionar...</string>
     <string name="fill_required_fields">Por favor complete todos los campos obligatorios (*)</string>
     <string name="success_message">¡Datos guardados exitosamente!</string>
 </resources>
