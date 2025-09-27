@@ -33,10 +33,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.composed
 import android.content.res.Configuration
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.NavHostController
+import co.edu.udea.compumovil.labs20252_gr04.lab1.R
 
 // ---------- APP PRINCIPAL ----------
 @Composable
@@ -80,7 +82,7 @@ fun PersonalDataScreen(
     val isPortrait =
         LocalConfiguration.current.orientation == Configuration.ORIENTATION_PORTRAIT
 
-    FormScaffold(title = "Información personal") {
+    FormScaffold(title = stringResource(R.string.personal_information)) {
         if (isPortrait) {
             // Vertical
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -94,7 +96,7 @@ fun PersonalDataScreen(
                     onClick = onNext,
                     enabled = uiState.isButtonEnabled,
                     modifier = Modifier.fillMaxWidth()
-                ) { Text("Siguiente") }
+                ) { Text(stringResource(R.string.next)) }
             }
         } else {
             //Horizontal
@@ -153,7 +155,7 @@ fun PersonalDataScreen(
                     Button(
                         onClick = onNext,
                         enabled = uiState.isButtonEnabled
-                    ) { Text("Siguiente") }
+                    ) { Text(stringResource(R.string.next)) }
                 }
             }
         }
@@ -170,7 +172,7 @@ fun ContactDataScreen(
     val uiState by viewModel.uiState.collectAsState()
     val isPortrait = LocalConfiguration.current.orientation == Configuration.ORIENTATION_PORTRAIT
 
-    FormScaffold(title = "Datos de contacto") {
+    FormScaffold(title = stringResource(R.string.contact_information)) {
         if (isPortrait) {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 PhoneField(uiState.phone) { viewModel.updatePhone(it) }
@@ -183,7 +185,7 @@ fun ContactDataScreen(
                     onClick = onNext,
                     enabled = uiState.isContactButtonEnabled,
                     modifier = Modifier.fillMaxWidth()
-                ) { Text("Siguiente") }
+                ) { Text(stringResource(R.string.next)) }
             }
         } else {
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -199,7 +201,7 @@ fun ContactDataScreen(
                         onClick = onNext,
                         enabled = uiState.isContactButtonEnabled,
                         modifier = Modifier.align(Alignment.End)
-                    ) { Text("Siguiente") }
+                    ) { Text(stringResource(R.string.next)) }
                 }
             }
         }
@@ -216,45 +218,45 @@ fun SummaryScreen(
     val uiState by viewModel.uiState.collectAsState()
     val isPortrait = LocalConfiguration.current.orientation == Configuration.ORIENTATION_PORTRAIT
     //Datos completos
-    FormScaffold(title = "Resumen de datos") {
+    FormScaffold(title = stringResource(R.string.data_summary)) {
         if (isPortrait) {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                SummaryCard("Datos personales") {
-                    Text("Nombre: ${uiState.firstName} ${uiState.lastName}")
-                    Text("Sexo: ${uiState.gender}")
-                    Text("Nacimiento: ${uiState.birthDate}")
-                    Text("Escolaridad: ${uiState.educationLevel}")
+                SummaryCard(stringResource(R.string.personal_data)) {
+                    Text("${stringResource(R.string.full_name)}: ${uiState.firstName} ${uiState.lastName}")
+                    Text("${stringResource(R.string.gender)}: ${uiState.gender}")
+                    Text("${stringResource(R.string.birth)}: ${uiState.birthDate}")
+                    Text("${stringResource(R.string.education)}: ${uiState.educationLevel}")
                 }
-                SummaryCard("Datos de contacto") {
-                    Text("Teléfono: ${uiState.phone}")
-                    Text("Dirección: ${uiState.address}")
-                    Text("Email: ${uiState.email}")
-                    Text("País: ${uiState.country}")
-                    Text("Ciudad: ${uiState.city}")
+                SummaryCard(stringResource(R.string.contact_information)) {
+                    Text("${stringResource(R.string.phone)}: ${uiState.phone}")
+                    Text("${stringResource(R.string.address)}: ${uiState.address}")
+                    Text("${stringResource(R.string.email)}: ${uiState.email}")
+                    Text("${stringResource(R.string.country)}: ${uiState.country}")
+                    Text("${stringResource(R.string.city)}: ${uiState.city}")
                 }
                 Button(onClick = onEdit, modifier = Modifier.fillMaxWidth()) {
-                    Text("Editar datos")
+                    Text(stringResource(R.string.edit_data))
                 }
             }
         } else {
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                SummaryCard("Datos personales", Modifier.weight(1f)) {
-                    Text("Nombre: ${uiState.firstName} ${uiState.lastName}")
-                    Text("Sexo: ${uiState.gender}")
-                    Text("Nacimiento: ${uiState.birthDate}")
-                    Text("Escolaridad: ${uiState.educationLevel}")
+                SummaryCard(stringResource(R.string.personal_data), Modifier.weight(1f)) {
+                    Text("${stringResource(R.string.full_name)}: ${uiState.firstName} ${uiState.lastName}")
+                    Text("${stringResource(R.string.gender)}: ${uiState.gender}")
+                    Text("${stringResource(R.string.birth)}: ${uiState.birthDate}")
+                    Text("${stringResource(R.string.education)}: ${uiState.educationLevel}")
                 }
-                SummaryCard("Datos de contacto", Modifier.weight(1f)) {
-                    Text("Teléfono: ${uiState.phone}")
-                    Text("Dirección: ${uiState.address}")
-                    Text("Email: ${uiState.email}")
-                    Text("País: ${uiState.country}")
-                    Text("Ciudad: ${uiState.city}")
+                SummaryCard(stringResource(R.string.contact_information), Modifier.weight(1f)) {
+                    Text("${stringResource(R.string.phone)}: ${uiState.phone}")
+                    Text("${stringResource(R.string.address)}: ${uiState.address}")
+                    Text("${stringResource(R.string.email)}: ${uiState.email}")
+                    Text("${stringResource(R.string.country)}: ${uiState.country}")
+                    Text("${stringResource(R.string.city)}: ${uiState.city}")
                 }
             }
             Spacer(Modifier.height(16.dp))
             Button(onClick = onEdit, modifier = Modifier.align(Alignment.End)) {
-                Text("Editar datos")
+                Text(stringResource(R.string.edit_data))
             }
         }
     }

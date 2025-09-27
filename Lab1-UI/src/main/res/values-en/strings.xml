@@ -26,6 +26,13 @@
     <string name="country">Country</string>
     <string name="city">City</string>
 
+    <!-- Data Summary -->
+    <string name="data_summary">Data Summary</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="full_name">Name</string>
+    <string name="birth">Birth</string>
+    <string name="education">Education</string>
+
     <!-- Latin American Countries -->
     <string name="argentina">Argentina</string>
     <string name="bolivia">Bolivia</string>
@@ -47,9 +54,18 @@
     <string name="uruguay">Uruguay</string>
     <string name="venezuela">Venezuela</string>
 
+    <!-- Cities in Colombia -->
+    <string name="bogota">Bogotá</string>
+    <string name="medellin">Medellín</string>
+    <string name="cali">Cali</string>
+
     <!-- Buttons and Messages -->
     <string name="next">Next</string>
     <string name="submit">Submit</string>
+    <string name="change">Change</string>
+    <string name="okay">Okay</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_data">Edit Data</string>
     <string name="fill_required_fields">Please fill in all required fields (*)</string>
     <string name="success_message">Data saved successfully!</string>
 </resources>

@@ -4,11 +4,11 @@
 
     <!-- Información Personal -->
     <string name="personal_information">Información Personal</string>
-    <string name="first_name">Nombre (*)</string>
-    <string name="last_name">Apellido (*)</string>
+    <string name="first_name">Nombres (*)</string>
+    <string name="last_name">Apellidos (*)</string>
     <string name="gender">Sexo</string>
-    <string name="male">Masculino</string>
-    <string name="female">Femenino</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
     <string name="other">Otro</string>
     <string name="birth_date">Fecha de nacimiento (*)</string>
     <string name="education_level">Grado de Escolaridad</string>
@@ -19,12 +19,19 @@
     <string name="postgraduate">Postgrado</string>
 
     <!-- Información de Contacto -->
-    <string name="contact_information">Información de Contacto</string>
+    <string name="contact_information">Datos de Contacto</string>
     <string name="phone">Teléfono</string>
     <string name="address">Dirección</string>
     <string name="email">Correo Electrónico</string>
     <string name="country">País</string>
     <string name="city">Ciudad</string>
+
+    <!-- resumen de datos -->
+    <string name="data_summary">Resumen de Datos</string>
+    <string name="personal_data">Datos Personales</string>
+    <string name="full_name">Nombre</string>
+    <string name="birth">Nacimiento</string>
+    <string name="education">Escolaridad</string>
 
     <!-- Países Latinoamericanos -->
     <string name="argentina">Argentina</string>
@@ -47,9 +54,18 @@
     <string name="uruguay">Uruguay</string>
     <string name="venezuela">Venezuela</string>
 
+    <!-- Ciudades Colombia -->
+    <string name="bogota">Bogotá</string>
+    <string name="medellin">Medellín</string>
+    <string name="cali">Cali</string>
+
     <!-- Botones y Mensajes -->
     <string name="next">Siguiente</string>
     <string name="submit">Enviar</string>
+    <string name="change">Cambiar</string>
+    <string name="okay">Listo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="edit_data">Editar datos</string>
     <string name="fill_required_fields">Por favor complete todos los campos obligatorios (*)</string>
     <string name="success_message">¡Datos guardados exitosamente!</string>
 </resources>
