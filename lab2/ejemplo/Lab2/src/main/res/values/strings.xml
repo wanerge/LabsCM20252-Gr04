@@ -1,0 +1,73 @@
+<!--
+  ~ Copyright 2020 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Jetchat</string>
+
+    <string name="navigation_drawer_open">Abrir panel de navegación</string>
+    <string name="navigation_drawer_close">Cerrar panel de navegación</string>
+    <string name="nav_header_title">Compositor</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Encabezado de navegación</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Galería</string>
+    <string name="menu_slideshow">Presentación</string>
+    <string name="conversations">Conversaciones</string>
+    <string name="profile">Perfil</string>
+    <string name="jumpBottom">Ir al final</string>
+    <string name="send">Enviar</string>
+    <string name="author_me">yo</string>
+    <string name="now">8:30 p. m.</string>
+    <string name="members">%d miembros</string>
+    <string name="textfield_hint">Mensaje #compositores</string>
+    <string name="swipe_to_cancel_recording">&#x25C0; Desliza para cancelar</string>
+    <string name="emojis_label">Emojis</string>
+    <string name="stickers_label">Stickers</string>
+
+    <string name="message">Mensaje</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="profile_error">Hubo un error al cargar el perfil</string>
+    <string name="bio">Biografía</string>
+    <string name="display_name">Nombre visible</string>
+    <string name="status">Estado</string>
+    <string name="timezone">Zona horaria</string>
+    <string name="twitter">Twitter</string>
+    <string name="common_channels">Canales en común</string>
+    <string name="lorem">Lorem o Ipsum</string>
+
+    <!-- Descripciones de accesibilidad -->
+
+    <string name="emoji_selector_desc">Selector de emojis</string>
+    <string name="emoji_selector_bt_desc">Mostrar selector de emojis</string>
+    <string name="dm_desc">Mensaje directo</string>
+    <string name="attach_photo_desc">Adjuntar foto</string>
+    <string name="map_selector_desc">Selector de ubicación</string>
+    <string name="videochat_desc">Iniciar videollamada</string>
+    <string name="textfield_desc">Campo de texto</string>
+    <string name="not_available">Funcionalidad no disponible actualmente</string>
+    <string name="not_available_subtitle">Toma una bebida y vuelve más tarde.</string>
+    <string name="attached_image">Imagen adjunta</string>
+    <string name="search">Buscar</string>
+    <string name="info">Información</string>
+    <string name="more_options">Más opciones</string>
+    <string name="touch_and_hold_to_record">Toca y mantén presionado para grabar</string>
+    <string name="record_message">Grabar mensaje de voz</string>
+    <string name="messages_widget_title">Mensajes no leídos de JetChat</string>
+    <string name="add_widget_to_home_page">Agregar widget a la pantalla principal</string>
+</resources>
+
